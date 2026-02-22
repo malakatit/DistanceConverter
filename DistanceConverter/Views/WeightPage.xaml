@@ -1,0 +1,51 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DistanceConverter.Views.WeightPage">
+
+    <ScrollView>
+        <Grid Padding="20">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Kilograms" Grid.Row="0"/>
+            <Entry x:Name="txtKilograms" Grid.Row="0" Grid.Column="2" TextChanged="TxtKilograms_OnTextChanged"/>
+
+            <Label Text="Grams" Grid.Row="2"/>
+            <Entry x:Name="txtGrams" Grid.Row="2" Grid.Column="2" TextChanged="TxtGrams_OnTextChanged"/>
+
+            <Label Text="Pounds" Grid.Row="4"/>
+            <Entry x:Name="txtPounds" Grid.Row="4" Grid.Column="2" TextChanged="TxtPounds_OnTextChanged"/>
+
+            <Label Text="Ounces" Grid.Row="6"/>
+            <Entry x:Name="txtOunces" Grid.Row="6" Grid.Column="2" TextChanged="TxtOunces_OnTextChanged"/>
+
+            <Label Text="Tons" Grid.Row="8"/>
+            <Entry x:Name="txtTons" Grid.Row="8" Grid.Column="2" TextChanged="TxtTons_OnTextChanged"/>
+
+            <StackLayout Grid.Row="10" Grid.ColumnSpan="3" Orientation="Horizontal">
+                <Button Text="Clear" Clicked="Clear_OnClicked" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Convert" Clicked="Convert_OnClicked" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
